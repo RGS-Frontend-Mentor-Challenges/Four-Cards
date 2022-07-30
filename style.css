@@ -1,0 +1,157 @@
+/* Reseting CSS Browser definitions */
+@import url(https://fonts.google.com/specimen/Poppins);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif, Poppins;
+}
+
+/* Body & .main & generals*/
+body {
+    background-color: hsl(0, 0%, 98%);
+    color: hsl(229, 6%, 66%);
+    height: 1200px;
+}
+
+.main {
+    width: 100%;
+    min-width: 240px;
+    max-width: 380px;
+    height: 90%;
+    margin: 10% auto;
+}
+
+.subTitle {
+    color: hsl(234, 12%, 34%);
+}
+
+.ajustment {
+    width: 80%;
+    margin: auto;
+}
+
+.textsMargins {
+    margin: 3em 0;
+}
+
+.picContainer {
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    right: 1.5em;
+    bottom: 1.5em;
+}
+
+.parag {
+    font-weight: bold;
+}
+
+/* .texts */
+
+.texts {
+    text-align: center;
+}
+
+.headTitle {
+    font-weight: lighter;
+}
+
+/* cards */
+
+.card {
+    position: relative;
+    background-color: white;
+    height: 13em;
+    max-width: 19em;
+    min-width: 19em;
+    margin-top: 2em;
+    padding: 1.5em;
+    border-radius: 0.5em;
+    box-shadow: 0.5em 1em 1em hsl(229deg 6% 66%), -0.5em 0 1em hsl(229deg 6% 66%);
+}
+
+.card .parag {
+    margin-top: 1em;
+    font-size: 0.8em;
+}
+
+/* .supervisor */
+.supervisorPic {
+    background-image: url(./images/icon-supervisor.svg);
+}
+
+.supervisor {
+    border-top: 0.4em solid hsl(180, 62%, 55%);
+}
+
+/* .team */
+.teamPic {
+    background-image: url(./images/icon-team-builder.svg);
+}
+
+.team {
+    border-top: 0.4em solid hsl(0, 78%, 62%);
+}
+
+/* .karma */
+.karmaPic {
+    background-image: url(./images/icon-karma.svg);
+}
+
+.karma {
+    border-top: 0.4em solid hsl(34, 97%, 64%);
+}
+
+/* .calculator */
+.calculatorPic {
+    background-image: url(./images/icon-calculator.svg);
+}
+
+.calculator {
+    border-top: 0.4em solid hsl(212, 86%, 64%);
+}
+
+@media screen and (min-width: 600px) {
+
+    body {
+        width: 100%;
+    }
+
+    .main {
+        min-width: 240px;
+        max-width: 1350px;
+        height: 100%;
+        margin: 5em auto;
+    }
+
+    .main .texts .parag {
+        font-weight: bold;
+        width: 32em;
+        margin: auto;
+    }
+
+    .ajustment {
+        width: 100%;
+        margin: 0;
+    }
+
+    .cards {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        max-width: 1350px;
+        justify-content: center;
+        margin-top: 5em;
+    }
+
+    .card {
+        margin: 1em 0.5em;
+    }
+
+    .picContainer:hover {
+        cursor: pointer;
+        opacity: 0.5;
+    }
+}
