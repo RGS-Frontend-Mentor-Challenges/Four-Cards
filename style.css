@@ -8,34 +8,88 @@
     font-family: sans-serif, Poppins;
 }
 
+:root {
+    --head-subtitle-color:hsl(234, 12%, 34%);
+    --general-bg-color:hsl(0, 0%, 98%);
+    --general-txt-color:hsl(229, 6%, 66%);
+    --subtitle-color:hsl(234, 12%, 34%);
+    --shadow: 0.5em 1em 1em hsl(229deg 6% 66%);
+
+    --min-display: 20rem;
+    --minmax-card:19em;
+}
+
 /* Body & .main & generals*/
 body {
-    background-color: hsl(0, 0%, 98%);
-    color: hsl(229, 6%, 66%);
-    height: 1200px;
+    background-color: var(--general-bg-color);
+    color: var(--general-txt-color);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin-top: 5%;
+    padding: 3% 0;
 }
 
+.header {
+    width: 100%;
+    min-width: var(--min-display);
+    height: 10rem;
+    text-align: center;
+    gap: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.head-title {
+    font-weight: lighter;
+    font-size: 1.5rem;
+}
+
+.head-subtitle {
+    color: var(--head-subtitle-color);
+}
+
+.head-parag {
+    font-weight: bold;
+    width: 100%;
+}
+
+/* Main */
 .main {
     width: 100%;
-    min-width: 240px;
-    max-width: 380px;
-    height: 90%;
-    margin: 10% auto;
+    height: auto;
+    min-width: var(--min-display);
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
 }
 
-.subTitle {
-    color: hsl(234, 12%, 34%);
+.card {
+    position: relative;
+    font-size: 0.9rem;
+    font-weight:600;
+    background-color: var(--general-bg-color);
+    height: 13em;
+    max-width: var(--minmax-card);
+    min-width: 19em;
+    padding: 1.5rem;
+    border-radius: 0.5em;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-.ajustment {
-    width: 80%;
-    margin: auto;
+.subtitle {
+    color: var(--subtitle-color);
 }
-
-.textsMargins {
-    margin: 3em 0;
-}
-
 .picContainer {
     width: 64px;
     height: 64px;
@@ -43,42 +97,10 @@ body {
     right: 1.5em;
     bottom: 1.5em;
 }
-
-.parag {
-    font-weight: bold;
-}
-
-/* .texts */
-
-.texts {
-    text-align: center;
-}
-
-.headTitle {
-    font-weight: lighter;
-}
-
-/* cards */
-
-.card {
-    position: relative;
-    background-color: white;
-    height: 13em;
-    max-width: 19em;
-    min-width: 19em;
-    margin-top: 2em;
-    padding: 1.5em;
-    border-radius: 0.5em;
-    box-shadow: 0.5em 1em 1em hsl(229deg 6% 66%), -0.5em 0 1em hsl(229deg 6% 66%);
-}
-
-.card .parag {
-    margin-top: 1em;
-    font-size: 0.8em;
-}
-
+____________________________________________________________
+============================================================
 /* .supervisor */
-.supervisorPic {
+.supervisor-pic {
     background-image: url(./images/icon-supervisor.svg);
 }
 
@@ -87,7 +109,7 @@ body {
 }
 
 /* .team */
-.teamPic {
+.team-pic {
     background-image: url(./images/icon-team-builder.svg);
 }
 
@@ -96,7 +118,7 @@ body {
 }
 
 /* .karma */
-.karmaPic {
+.karma-pic {
     background-image: url(./images/icon-karma.svg);
 }
 
@@ -105,7 +127,7 @@ body {
 }
 
 /* .calculator */
-.calculatorPic {
+.calculator-pic {
     background-image: url(./images/icon-calculator.svg);
 }
 
@@ -113,7 +135,7 @@ body {
     border-top: 0.4em solid hsl(212, 86%, 64%);
 }
 
-@media screen and (min-width: 600px) {
+/* @media screen and (min-width: 600px) {
 
     body {
         width: 100%;
@@ -154,4 +176,4 @@ body {
         cursor: pointer;
         opacity: 0.5;
     }
-}
+} */
