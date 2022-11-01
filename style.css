@@ -14,12 +14,19 @@
     --general-txt-color: hsl(229, 6%, 66%);
     --subtitle-color: hsl(234, 12%, 34%);
     --supervisor-color: hsl(180, 62%, 55%);
+    --team-color:hsl(0, 78%, 62%);
+    --calculator-color:hsl(212, 86%, 64%);
+    --karma-color:hsl(34, 97%, 64%);
+
     --shadow: 0.5em 1em 1em hsl(229deg 6% 66%);
 
     --min-display: 20rem;
     --minmax-card: 19em;
 
     --supervisor-img: url(./images/icon-supervisor.svg);
+    --team-img:url(./images/icon-team-builder.svg);
+    --karma-img:url(./images/icon-karma.svg);
+    --calculator-img:url(./images/icon-calculator.svg);
 }
 
 /* Body & .main & generals*/
@@ -113,32 +120,32 @@ body {
 
 /* .team */
 .team .pic-container {
-    background-image: url(./images/icon-team-builder.svg);
+    background-image: var(--team-img);
 }
 
 .team {
-    border-top: 0.4em solid hsl(0, 78%, 62%);
+    border-top: 0.4em solid var(--team-color);
 }
 
 /* .karma */
 .karma .pic-container {
-    background-image: url(./images/icon-karma.svg);
+    background-image: var(--karma-img);
 }
 
 .karma {
-    border-top: 0.4em solid hsl(34, 97%, 64%);
+    border-top: 0.4em solid var(--karma-color);
 }
 
 /* .calculator */
 .calculator .pic-container {
-    background-image: url(./images/icon-calculator.svg);
+    background-image: var(--calculator-img);
 }
 
 .calculator {
-    border-top: 0.4em solid hsl(212, 86%, 64%);
+    border-top: 0.4em solid var(--calculator-color);
 }
 
-.picContainer:hover {
+.pic-container:hover {
     cursor: pointer;
     opacity: 0.5;
 }
