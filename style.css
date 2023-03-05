@@ -1,95 +1,107 @@
-/* Reseting CSS Browser definitions */
-@import url(https://fonts.google.com/specimen/Poppins);
-
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: sans-serif, Poppins;
+    font-family: var(--font-family);
+    height: auto;
 }
 
 :root {
-    --head-subtitle-color: hsl(234, 12%, 34%);
-    --general-bg-color: hsl(0, 0%, 98%);
-    --general-txt-color: hsl(229, 6%, 66%);
-    --subtitle-color: hsl(234, 12%, 34%);
-    --supervisor-color: hsl(180, 62%, 55%);
-    --team-color:hsl(0, 78%, 62%);
-    --calculator-color:hsl(212, 86%, 64%);
-    --karma-color:hsl(34, 97%, 64%);
+    --cor01: hsl(234, 12%, 34%);
+    --cor02: hsl(0, 0%, 98%);
+    --cor03: hsl(229, 6%, 66%);
+    --cor04: hsl(234, 12%, 34%);
+    --cor05: hsl(180, 62%, 55%);
+    --cor06: hsl(0, 78%, 62%);
+    --cor07: hsl(212, 86%, 64%);
+    --cor08: hsl(34, 97%, 64%);
 
     --shadow: 0.5em 1em 1em hsl(229deg 6% 66%);
 
-    --min-display: 20rem;
-    --minmax-card: 19em;
+    --minmax: 19em;
 
     --supervisor-img: url(./images/icon-supervisor.svg);
-    --team-img:url(./images/icon-team-builder.svg);
-    --karma-img:url(./images/icon-karma.svg);
-    --calculator-img:url(./images/icon-calculator.svg);
+    --team-img: url(./images/icon-team-builder.svg);
+    --karma-img: url(./images/icon-karma.svg);
+    --calculator-img: url(./images/icon-calculator.svg);
+
+    --font-family: "Poppins", sans-serif;
 }
 
 /* Body & .main & generals*/
 body {
-    background-color: var(--general-bg-color);
-    color: var(--general-txt-color);
-    height: auto;
+    width: 100%;
+    margin: 0 auto;
+    height: 68rem;
+    background-color: var(--cor02);
+    color: var(--cor03);
     display: flex;
-    flex-direction: column;
     align-items: center;
-    align-content: center;
+    flex-direction: column;
     flex-wrap: wrap;
-    gap: 3rem;
-    margin-top: 5%;
-    padding: 5% 0;
 }
 
-.header {
+/* Selector Grouping */
+
+.header,
+.main {
     width: 100%;
-    min-width: var(--min-display);
-    height: 10rem;
+}
+
+/* Header */
+.header {
+    min-width: var(--minmax);
+    height: 15rem;
     text-align: center;
-    gap: 3rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
+    gap: 3rem;
 }
 
-.head-title {
+.header__title-container {
+    line-height: 1;
+}
+
+.header__subtitle {
     font-weight: lighter;
+}
+
+.header__title {
     font-size: 1.5rem;
+    color: var(--cor01);
 }
 
-.head-subtitle {
-    color: var(--head-subtitle-color);
+.header__subtitle {
+    font-weight: lighter;
+    font-size: 1.53rem;
 }
 
-.head-parag {
+.header__parag {
     font-weight: bold;
-    width: 100%;
+    font-size: 0.88rem;
+    width: 90%;
 }
 
 /* Main */
 .main {
-    width: 100%;
-    height: auto;
-    min-width: var(--min-display);
+    min-width: var(--minmax);
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
     align-items: center;
+    gap: 1.5rem;
 }
 
 .card {
     position: relative;
     font-size: 0.899rem;
     font-weight: 600;
-    background-color: var(--general-bg-color);
+    background-color: var(--cor02);
     height: 13em;
-    max-width: var(--minmax-card);
-    min-width: 19em;
-    padding: 1.5rem;
+    max-width: var(--minmax);
+    min-width: var(--minmax);
+    padding: 0.8rem;
     border-radius: 0.5em;
     box-shadow: var(--shadow);
     display: flex;
@@ -97,107 +109,153 @@ body {
     gap: 1rem;
 }
 
-.subtitle {
-    color: var(--subtitle-color);
+.card__title {
+    color: var(--cor04);
 }
 
-.pic-container {
+.card__pic-container {
     width: 64px;
     height: 64px;
-    position: absolute;
     right: 1.5em;
     bottom: 1.5em;
+    position: absolute;
 }
 
 /* .supervisor */
-.supervisor .pic-container {
-    background-image: var(--supervisor-img);
+.main__supervisor .card__pic-container {
+    background: var(--supervisor-img) no-repeat;
 }
 
-.supervisor {
-    border-top: 0.4em solid var(--supervisor-color);
+.main__supervisor {
+    border-top: 0.4em solid var(--cor05);
 }
 
 /* .team */
-.team .pic-container {
+
+.main__team .card__pic-container {
     background-image: var(--team-img);
 }
 
-.team {
-    border-top: 0.4em solid var(--team-color);
+.main__team {
+    border-top: 0.4em solid var(--cor06);
 }
 
 /* .karma */
-.karma .pic-container {
+.main__karma .card__pic-container {
     background-image: var(--karma-img);
 }
 
-.karma {
-    border-top: 0.4em solid var(--karma-color);
+.main__karma {
+    border-top: 0.4em solid var(--cor08);
 }
 
 /* .calculator */
-.calculator .pic-container {
+.main__calculator .card__pic-container {
     background-image: var(--calculator-img);
 }
 
-.calculator {
-    border-top: 0.4em solid var(--calculator-color);
+.main__calculator {
+    border-top: 0.4em solid var(--cor07);
 }
 
-.pic-container:hover {
+.card__pic-container:hover {
     cursor: pointer;
     opacity: 0.5;
 }
 
-@media screen and (min-width: 26.875rem) {
+@media (min-width: 325px) {
+    .header {
+        gap: 2rem;
+    }
 
+    .header__title,
+    .header__subtitle {
+        font-size: 1.7rem;
+    }
+
+    .header__parag {
+        width: 85%;
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 380px) {
     body {
+        height: 68rem;
         width: 100%;
     }
 
     .header {
-        width: 80%;
-        height: 7rem;
+        width: 85%;
+    }
+
+    .header__title,
+    .header__subtitle {
+        font-size: 1.89rem;
     }
 
     .main {
-        flex-direction: row;
-        flex-wrap: wrap;
         justify-content: center;
+    }
+
+    .header__parag {
+        width: 100%;
+        font-size: 1.1rem;
     }
 }
 
-@media (min-width: 48.125rem) {
+@media (min-width: 565px) {
 
 
     body {
-        margin-top: 2%;
+        height: 39rem;
         padding: 0;
     }
 
     .header {
-        width: 50%;
+        width: 100%;
+        height: 13rem;
+        gap: 1rem;
+    }
+
+    .header__title-container {
+        line-height: 1.5;
+    }
+
+    .header__parag {
+        width: 80%;
     }
 
     .main {
         display: grid;
-        grid-template-columns: repeat(3, var(--minmax-card));
+        grid-template-columns: repeat(2, var(--minmax));
         justify-items: center;
         position: relative;
+        gap: 10px 0;
+    }
+}
+
+@media (min-width:770px) {
+    body {
+        height: 40rem;
     }
 
-    .supervisor {
-        grid-row: 1/3;
+    .main {
+        grid-template-columns: repeat(3, var(--minmax));
+        gap: 25px;
     }
 
-    .calculator {
-        grid-row: 1/3;
+    .main__supervisor {
+        grid-row: 1 / 3;
+    }
+
+    .main__karma {
+        grid-row: 1 / 3;
         grid-column: 3;
     }
 
-    .karma {
-        order: 4;
-        grid-column: 2;
+    .main__team,
+    .main__calculator {
+        grid-column: 2/span 1;
     }
 }
