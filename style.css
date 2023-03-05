@@ -235,7 +235,7 @@ body {
     }
 }
 
-@media (min-width:770px) {
+@media (min-width:920px) {
     body {
         height: 40rem;
     }
