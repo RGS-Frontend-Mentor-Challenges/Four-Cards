@@ -30,19 +30,24 @@
 
 /* Body & .main & generals*/
 body {
-    width: 100%;
     margin: 0 auto;
     height: 68rem;
     background-color: var(--cor02);
     color: var(--cor03);
-    display: flex;
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
 }
 
 /* Selector Grouping */
+body,
+.header,
+.main,
+.card {
+    display: flex;
+}
 
+body,
 .header,
 .main {
     width: 100%;
@@ -53,7 +58,6 @@ body {
     min-width: var(--minmax);
     height: 15rem;
     text-align: center;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -87,7 +91,6 @@ body {
 /* Main */
 .main {
     min-width: var(--minmax);
-    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
@@ -104,7 +107,6 @@ body {
     padding: 0.8rem;
     border-radius: 0.5em;
     box-shadow: var(--shadow);
-    display: flex;
     flex-direction: column;
     gap: 1rem;
 }
